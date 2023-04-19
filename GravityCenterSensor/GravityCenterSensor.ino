@@ -10,13 +10,28 @@
 /// 
 /// </summary>
 const int SerialPort = 9600;
+/// <summary>
+/// 按鈕腳位
+/// </summary>
+const int ButtonPin[] = { 0,1 };
+
+/// <summary>
+/// 按鈕腳位陣列長度
+/// </summary>
+int ButtonPinArrayLength;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
+	ButtonPinArrayLength = sizeof(ButtonPin) / sizeof(ButtonPin[0]);
 
+	Serial.begin(SerialPort);
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
-
+	for (int a = 0;a < ButtonPinArrayLength;a++)
+	{
+		//Serial.println("Read : " +String( ButtonPin[a]));
+		Serial.println("BT:" + String(a) + "|" + String(analogRead(ButtonPin[a])));
+	}
 }

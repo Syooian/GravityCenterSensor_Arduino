@@ -1,0 +1,6 @@
+<VisualMicro>
+  <Program Name="GravityCenterSensor" Ext=".ino" Location="D:\Syooian\WorkProjects\重心感測器\VisualStudio\GravityCenterSensor\GravityCenterSensor">
+    <Debug RemotePortSpeed="9600" LocalPortSpeed="9600" />
+    <Compile />
+  </Program>
+</VisualMicro>
